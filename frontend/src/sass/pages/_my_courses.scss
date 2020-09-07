@@ -1,0 +1,57 @@
+.mycourses {
+    grid-column: full-start / full-end;
+    grid-row: 2 / -1;
+    background-color: $color-white !important;
+    margin: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &--add {
+        width: 30rem;
+        height: 32rem;
+        padding: 1rem;
+        border: 2px solid $color-primary;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        user-select: none;
+        transition: all .2s cubic-bezier(0.55, 0, 0.55, 0.2);
+        cursor: pointer;
+
+        &:hover &--icon {
+            opacity: 1;
+            color: $color-white;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-primary;
+        }
+
+        &--icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 9rem;
+            color: $color-primary;
+            opacity: 0.2;
+            transition: all .2s cubic-bezier(0.55, 0, 0.55, 0.2);
+        }
+
+        &--header {
+            font-size: 2.8rem;
+        }
+        
+        &--text {
+            font-size: 1.8rem;
+
+        }
+    }
+}

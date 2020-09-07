@@ -1,0 +1,55 @@
+.btn {
+    background-color: #2f3542;
+    color: $color-white;
+    padding: .75rem 1.8rem; 
+    border-radius: 2.815rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    transition: all .3s;
+    
+    &:hover {
+        background-color: darken(#2f3542, $amount: 5%);
+        letter-spacing: 1px;
+    }
+
+    &:hover .dropdown--hint {
+        opacity: 1;
+        letter-spacing: unset;
+    }
+    
+    &:active {
+        transform: translate(0, calc(-50% + 0.2rem)) scale(0.98);
+        background-color: darken(#2f3542, $amount: 10%);
+    }
+
+    &-secondary {
+        background-color: $color-secondary;
+        &:hover {
+            background-color: darken($color-secondary, $amount: 5%);
+            letter-spacing: 1px;
+        }
+    }
+    
+    &-success {
+        background-color: $color-success;
+        &:hover {
+            background-color: darken($color-success, $amount: 5%);
+        }
+    }
+    
+    &-warning {
+        background-color: $color-warning;
+        &:hover {
+            background-color: darken($color-warning, $amount: 5%);
+        }
+    }
+    
+    &-danger {
+        background-color: $color-error;
+        &:hover {
+            background-color: darken($color-error, $amount: 5%);
+        }
+    }
+}
